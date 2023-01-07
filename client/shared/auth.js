@@ -1,5 +1,6 @@
 const localhost = true;
-const url = `http://${localhost ? 'localhost' : '192.168.1.20'}:3528`
+const ip = '192.168.1.20';
+const url = `http://${localhost ? 'localhost' : ip}:3528`
 
 const token = localStorage.getItem('accessToken');
 if(!token) window.location.replace('/auth');
