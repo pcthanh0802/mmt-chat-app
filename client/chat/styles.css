@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 15px;
+}
+
+body {
+    display: flex;
+    overflow: hidden;
+}
+
+img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+td {
+    vertical-align: middle;
+}
+
+.sidebar {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #23272a;
+    overflow-y: scroll;
+    height: 100vh;
+    width: 70px;
+}
+
+.logo {
+    margin-bottom: 10px;
+}
+
+.logo > img {
+    height: 45px;
+    width: 50px;
+    border-radius: 30%;
+    cursor: pointer;
+    border: none;
+}
+
+.logo::before {
+    content: "";
+    height: 2px;
+    width: 35px;
+    position: absolute;
+    top: 9%;
+    left: 25%;
+    background-color: #353a3f;
+}
+
+.logo::after {
+    content: "";
+    height: 35px;
+    width: 3px;
+    position: absolute;
+    top: 2.1%;
+    left: 0%;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+.server-logo {
+    position: relative;
+}
+
+.server-logo > img {
+    transition: 0.3s ease-in-out;
+}
+
+.server-logo > img:hover {
+    cursor: pointer;
+    border-radius: 30%;
+    transition: 0.3s ease-in-out;
+}
+
+.server-logo::after {
+    content: "";
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    top: 50%;
+    right: 110%;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.message__count {
+    position: absolute;
+    color: #fff;
+    font-weight: 600;
+    font-size: 12px;
+    background-color: #fc3c3c;
+    border-radius: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    outline: 3px solid #23272a;
+    right: 10%;
+    top: 70%;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+.optionBar {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 250px;
+    height: 100vh;
+    background-color: #2f3135;
+    color: gray;
+    padding: 0px 5px;
+}
+
+.optionBar__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #2f3135;
+    color: #fff;
+    border-bottom: 2px solid #26282c;
+    height: 50px;
+}
+
+.optionBar__top > form > input {
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    color: gray;
+    background-color: #1d1d1d;
+    border-radius: 3px;
+    padding: 5px;
+    width: 90%;
+}
+
+.optionBar__icon {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.optionBar__icon:hover {
+    color: #fff;
+    background-color: #40464b;
+    cursor: pointer;
+}
+
+.optionBar__icon > i {
+    margin-left: 10px;
+}
+
+.optionBar__icon > span {
+    margin-left: 10px;
+    font-weight: 400;
+}
+
+.optionBar__users {
+    flex: 1;
+    overflow: scroll;
+}
+
+.optionBar__usersHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #2f3135;
+    color: gray;
+}
+
+.optionBar__header {
+    display: flex;
+    align-items: center;
+}
+
+.optionBar__header span {
+    font-size: 13px;
+}
+
+.optionBar__addUser {
+    cursor: pointer;
+}
+
+.optionBar__addUser:hover {
+    color: #fff;
+}
+
+.optionBar__user {
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    background-color: #2f3135;
+    color: gray;
+    cursor: pointer;
+    border-radius: 5px;
+    height: 50px;
+    margin: 2px 0;
+}
+
+.optionBar__user:hover {
+    color: #fff;
+    background-color: #40464b;
+}
+
+.optionBar__user > div {
+    position: relative;
+    height: 32px;
+}
+
+.optionBar__user > div > img {
+    height: 32px;
+    width: 32px;
+    margin: 0;
+}
+
+.optionBar__user > span {
+    margin-left: 15px;
+}
+
+.status {
+    height: 10px;
+    width: 10px;
+    background-color: #4fb185;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    outline: 3px solid #2f3135;
+}
+
+.status.offline {
+    background-color: #23272a;
+}
+
+.optionBar__profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #292a2d;
+    margin: 0px -5px;
+    padding: 0px 5px;
+    height: 60px;
+}
+
+.optionBar__profile > div:nth-child(1) {
+    position: relative;
+    height: 32px;
+}
+
+.optionBar__profile > div > img {
+    height: 32px;
+    width: 32px;
+    margin: 0;
+}
+
+.optionBar__profileInfo {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.optionBar__profileInfo > h3 {
+    color: #fff;
+    font-size: 15px;
+    /* line-height: 1; */
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.optionBar__profileInfo > p {
+    color: #fff;
+    font-size: 10px;
+    margin-bottom: 0;
+}
+
+.optionBar__profileIcons > i {
+    padding: 10px;
+}
+
+.chat {
+    display: flex;
+    flex-direction: column;
+    background-color: #353a3f;
+    height: 100vh;
+    flex: 1;
+}
+
+.chatHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: grey;
+    height: 50px;
+    border-bottom: 2px solid #26282c;
+}
+
+.chatHeader__left {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 13px;
+}
+
+.chatHeader__Dm {
+    color: grey;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.chatHeader__right {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    margin-right: 10px;
+}
+
+.chatHeader__left > h3 {
+    font-weight: bold;
+    margin-bottom: 0;
+    font-size: 17px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    color: grey;
+    background-color: #1d1d1d;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+.search > input {
+    background-color: transparent;
+    outline-width: 0;
+    color: #fff;
+    border: none;
+}
+
+.chat__messages {
+    flex: 1;
+    overflow: scroll;
+}
+
+.message, .adjacent-message {
+    display: flex;
+    align-items: center;
+    padding: 1px 20px;
+    color: #fff;
+}
+
+.message {
+    margin-top: 15px;
+}
+
+.message > img {
+    height: 48px;
+    width: 48px;
+    margin: 0;
+}
+
+.message__info {
+    margin-left: 20px;
+}
+
+.message__timestamp {
+    color: grey;
+    margin-left: 20px;
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.message > .message__timestamp, .adjacent-message > .message__timestamp {
+    width: 48px;
+    margin: 0;
+}
+
+.message__info > h4 {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+
+.message__info > p {
+    width: 300px;
+    word-wrap: break-word;
+    margin-bottom: 0;
+}
+
+.chat__input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px;
+    background-color: #474b53;
+    color: lightgray;
+}
+
+.chat__input > form {
+    flex: 1;
+}
+
+.chat__input > form > input {
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    outline-width: 0;
+    color: #fff;
+    width: 100%;
+}
+
+.chat__inputButton {
+    display: none;
+}
+
+.chat__inputIcons > label {
+    margin-left: 10px;
+}
+
+.modal-title{
+    font-weight: bold;
+}
+
+td {
+    vertical-align: middle;
+}
+
+.btn {
+    margin: 5px;    
+}
+
+@media (max-width: 840px) {
+    .sidebar {
+        display: none;
+    }
+
+    .optionBar {
+        width: 70px;
+        align-items: center;
+    }
+
+    .optionBar__icon > span {
+        display: none;
+    }
+
+    .optionBar__icon > i {
+        margin: 0;
+    }
+
+    .optionBar__usersHeader {
+        justify-content: center;
+    }
+
+    .optionBar__header {
+        display: none;
+    }
+
+    .optionBar__user > h4 {
+        display: none;
+    }
+
+    .optionBar__profile {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .optionBar__profileInfo {
+        display: none;
+    }
+
+    .optionBar__profileIcons {
+        display: flex;
+    }
+
+    .optionBar__profileIcons > i {
+        padding: 5px;
+    }
+
+    .chatHeader {
+        justify-content: center;
+    }
+
+    .chatHeader__left {
+        display: none;
+    }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Log in | MMT Chat App</title>
+</head>
+
+<body>
+    <div id="main" class="main" style="background-image: url('background.jpg');">
+        <form class="form" id="login-form">
+            <h2 class="heading">Welcome to MMT Chat App!</h2>
+            <p class="desc">We're so excited to see you</p>
+
+            <div class="spacer"></div>
+
+            <div class="form-group">
+                <label for="username" class="form-label">USERNAME</label>
+                <input name="username" type="text" class="form-control" autocomplete="off">
+                <span id="login-username-err" class="form-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="password" class="form-label">PASSWORD</label>
+                <input name="password" type="password" class="form-control" autocomplete="off">
+                <span id="login-pw-err" class="form-message"></span>
+            </div>
+
+            <button class="form-submit log-in">Login</button>
+            <div class="link-register">
+                <p>Need an account?</p> <span id="toRegister">Register</span>
+            </div>
+        </form>
+
+        <form action="" method="POST" class="form hidden" id="register-form">
+            <h3 class="heading">Create an Account</h3>
+            <p class="desc"></p>
+
+            <div class="spacer"></div>
+
+            <div class="form-group">
+                <label for="username" class="form-label">USERNAME</label>
+                <input name="username" type="text" class="form-control" autocomplete="off">
+                <span id="reg-username-err" class="form-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="form-label">EMAIL</label>
+                <input name="email" type="text" class="form-control" autocomplete="off">
+                <span id="reg-email-err" class="form-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="password" class="form-label">PASSWORD</label>
+                <input name="password" type="password" class="form-control" autocomplete="off">
+                <span id="reg-pw-err" class="form-message"></span>
+            </div>
+
+            <button class="form-submit">Register</button>
+            <div class="link-register">
+                <p>Already have an account?</p> <span id="toLogin">Login</span>
+            </div>
+        </form>
+
+    </div>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>  
+    <script src="main.js"></script>
+</body>
+
+</html>
